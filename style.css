@@ -51,7 +51,9 @@ body{
 .name{font-size:2rem;margin:0}
 .headline{color:var(--accent-2);font-weight:600;margin:0.5rem 0}
 .intro{color:var(--muted);max-width:60ch}
-.avatar{width:160px;height:160px;border-radius:18px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0e1320,#122033);font-size:2.2rem;color:var(--accent);border:1px solid rgba(255,255,255,0.03)}
+.avatar{width:clamp(96px,16vw,180px);height:clamp(96px,16vw,180px);border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0e1320,#122033);color:var(--accent);border:1px solid rgba(255,255,255,0.06);overflow:hidden;position:relative}
+.avatar-img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.6rem;letter-spacing:0.06em}
 .hero-visual{display:flex;flex-direction:column;align-items:center;gap:1rem}
 .quick-info{list-style:none;padding:0;margin:0;color:var(--muted);font-size:0.95rem}
 .quick-info li{padding:0.15rem 0}
@@ -61,6 +63,9 @@ body{
 .about-grid{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;align-items:start}
 .about-text p{margin-top:0}
 .about-list h3{margin-top:0}
+
+.about-photo{width:160px;height:160px;border-radius:50%;overflow:hidden;margin-bottom:1rem;border:1px solid rgba(255,255,255,0.04);box-shadow:0 8px 26px rgba(2,6,23,0.5)}
+.profile-photo{width:100%;height:100%;object-fit:cover;display:block}
 
 /* Projects */
 .projects{padding:3rem 0}
